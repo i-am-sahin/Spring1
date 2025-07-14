@@ -10,6 +10,7 @@
 
     <bean id="alien" class="com.sahin.Alien">
         <property name="age" value="21"></property>
+        <property name="lap" ref="laptop"></property>
     </bean>
 
     <bean id="laptop" class="com.sahin.Laptop">
