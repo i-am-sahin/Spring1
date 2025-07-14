@@ -12,13 +12,14 @@ public class App
     public static void main( String[] args )
     {
 //        System.out.println( "Hello World!" );
-        Alien alien = new Alien();
-        alien.code();
+//        Alien alien = new Alien();
+//        alien.code();
 
 
         //Creating Container that stores bean
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(); //There is a different way to configuring Spring Project And one of the way is XML
-        Alien a2 = (Alien) applicationContext.getBean("Alien");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml"); //There is a different way to configuring Spring Project And one of the way is XML
+        Alien a2 = (Alien) applicationContext.getBean("alien");  // applicationContext.getBean --> Returns Object, so we've to typecast this.
+        a2.code();
 
     }
 }
