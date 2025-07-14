@@ -5,7 +5,11 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien" class="com.sahin.Alien" scope="prototype">
+<!--    <bean id="alien" class="com.sahin.Alien" scope="prototype">-->
+<!--    </bean>-->
+
+    <bean id="alien" class="com.sahin.Alien">
+        <property name="age" value="21"></property>
     </bean>
 
     <bean id="laptop" class="com.sahin.Laptop">
