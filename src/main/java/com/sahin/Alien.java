@@ -7,7 +7,8 @@ import java.beans.ConstructorProperties;
 
 public class Alien {
     private int age;
-    private Laptop lap;
+//    private Laptop lap;
+    private Computer com;
 
     public int getAge() {
         return age;
@@ -18,12 +19,21 @@ public class Alien {
         System.out.println("Setting the Age");
     }
 
-    public Laptop getLap() {
-        return lap;
+//    public Laptop getLap() {
+//        return lap;
+//    }
+//
+//    public void setLap(Laptop laptop) {
+//        this.lap = laptop;
+//    }
+
+
+    public Computer getCom() {
+        return com;
     }
 
-    public void setLap(Laptop laptop) {
-        this.lap = laptop;
+    public void setCom(Computer com) {
+        this.com = com;
     }
 
     public Alien(){
@@ -39,11 +49,11 @@ public class Alien {
     @ConstructorProperties({"age","lap"})
     public Alien(int age, Laptop lap) {
         this.age = age;
-        this.lap = lap;
+        this.com = lap;
     }
 
     void code(){
         System.out.println("Coding!");
-        lap.compiling();
+        com.compiling();
     }
 }
