@@ -16,7 +16,7 @@ public class Alien {
 
     public void setAge(int age) {
         this.age = age;
-        System.out.println("Setting the Age");
+//        System.out.println("Setting the Age");
     }
 
 //    public Laptop getLap() {
@@ -37,13 +37,13 @@ public class Alien {
     }
 
     public Alien(){
-        System.out.println("Object Created!");
+//        System.out.println("Object Created!");
 
     }
 
     public Alien(int age){
         this.age = age;
-        System.out.println("Para Constructor Called!");
+//        System.out.println("Para Constructor Called!");
     }
 
     @ConstructorProperties({"age","lap"})

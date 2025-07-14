@@ -8,8 +8,13 @@
 <!--    <bean id="alien" class="com.sahin.Alien" scope="prototype">-->
 <!--    </bean>-->
 
-    <bean id="alien" class="com.sahin.Alien">
-<!--        <property name="age" value="21"></property>-->
+
+<!--    Autowireing = byName ,byType-->
+
+    <bean id="alien" class="com.sahin.Alien" autowire="byType">
+<!--        <property name="com" ref="com1"></property>-->
+<!--        <property name="com" ref="com1"/>-->
+        <property name="age" value="21" ></property>
 
 <!--        This type only works when there is only one that type of data accepted by Constructor-->
 <!--        <constructor-arg ref="laptop" type="com.sahin.Laptop"/>-->
@@ -18,8 +23,8 @@
 
 <!--        We can use index to identify the position of where to set the data. index starts from 0-->
 <!--        Ideal Solution-->
-        <constructor-arg index="1" ref="laptop"/>
-        <constructor-arg index="0" value="21"/>
+<!--        <constructor-arg index="1" ref="laptop"/>-->
+<!--        <constructor-arg index="0" value="21"/>-->
 
 <!--We can use variable name to set the data-->
 
@@ -28,11 +33,16 @@
 
 
 
-        <property name="lap" ref="laptop"></property>
+
     </bean>
 
-    <bean id="laptop" class="com.sahin.Laptop">
-    </bean>
+
+    <bean id="com" class="com.sahin.Laptop"/>
+    <bean id="com1" class="com.sahin.Desktop"/>
+
+    <!--    <bean id="laptop" class="com.sahin.Laptop"/>-->
+
+
 
 </beans>
 
