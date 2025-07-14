@@ -19,10 +19,12 @@ public class App
         //Creating Container that stores bean
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml"); //There is a different way to configuring Spring Project And one of the way is XML
         Alien a2 = (Alien) applicationContext.getBean("alien");  // applicationContext.getBean --> Returns Object, so we've to typecast this.
-        a2.code();
-
+//        a2.code();
+        a2.age = 21;
+        System.out.println(a2.age);
         Alien a3 = (Alien) applicationContext.getBean("alien");  // applicationContext.getBean --> Returns Object, so we've to typecast this.
-        a2.code();
+//        a2.code();
+        System.out.println(a3.age);
 
     }
 }
