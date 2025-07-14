@@ -13,7 +13,7 @@
 
     <bean id="alien" class="com.sahin.Alien" autowire="byType">
 <!--        <property name="com" ref="com1"></property>-->
-        <property name="com" ref="com1"/>
+<!--        <property name="com" ref="com1"/>-->
         <property name="age" value="21" ></property>
 
 <!--        This type only works when there is only one that type of data accepted by Constructor-->
@@ -38,7 +38,7 @@
 
 
     <bean id="com" class="com.sahin.Laptop" primary="true"/>
-    <bean id="com1" class="com.sahin.Desktop"/>
+    <bean id="com1" class="com.sahin.Desktop" lazy-init="true"/>
 
     <!--    <bean id="laptop" class="com.sahin.Laptop"/>-->
 
