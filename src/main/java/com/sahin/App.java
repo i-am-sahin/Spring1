@@ -21,5 +21,8 @@ public class App
         Alien a2 = (Alien) applicationContext.getBean("alien");  // applicationContext.getBean --> Returns Object, so we've to typecast this.
         a2.code();
 
+        Alien a3 = (Alien) applicationContext.getBean("alien");  // applicationContext.getBean --> Returns Object, so we've to typecast this.
+        a2.code();
+
     }
 }
