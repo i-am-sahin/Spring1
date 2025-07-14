@@ -9,7 +9,25 @@
 <!--    </bean>-->
 
     <bean id="alien" class="com.sahin.Alien">
-        <property name="age" value="21"></property>
+<!--        <property name="age" value="21"></property>-->
+
+<!--        This type only works when there is only one that type of data accepted by Constructor-->
+<!--        <constructor-arg ref="laptop" type="com.sahin.Laptop"/>-->
+<!--        <constructor-arg value="21" type="int"/>-->
+
+
+<!--        We can use index to identify the position of where to set the data. index starts from 0-->
+<!--        Ideal Solution-->
+        <constructor-arg index="1" ref="laptop"/>
+        <constructor-arg index="0" value="21"/>
+
+<!--We can use variable name to set the data-->
+
+<!--        <constructor-arg name="lap" ref="laptop"/>-->
+<!--        <constructor-arg name="age" value="21"/>-->
+
+
+
         <property name="lap" ref="laptop"></property>
     </bean>
 
