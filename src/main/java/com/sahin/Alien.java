@@ -2,6 +2,7 @@ package com.sahin;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.beans.ConstructorProperties;
@@ -11,6 +12,7 @@ public class Alien {
     private int age;
 //    private Laptop lap;
 
+//@Qualifier("com28") //Bean name is basically YourClassName just the first letter is small.
     private Computer com;
 
     public int getAge() {
@@ -34,7 +36,7 @@ public class Alien {
     public Computer getCom() {
         return com;
     }
-
+    @Autowired
     public void setCom(Computer com) {
         this.com = com;
     }
