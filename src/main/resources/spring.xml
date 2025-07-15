@@ -38,7 +38,7 @@
 
 
     <bean id="com" class="com.sahin.Laptop" primary="true"/>
-    <bean id="com1" class="com.sahin.Desktop" lazy-init="true"/>
+    <bean  class="com.sahin.Desktop" lazy-init="true"/>
 
     <!--    <bean id="laptop" class="com.sahin.Laptop"/>-->
 
