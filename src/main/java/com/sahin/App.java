@@ -19,6 +19,10 @@ public class App
 
         Desktop dt = context.getBean("desktop",Desktop.class);
         dt.compiling();
+        Desktop dt2 = context.getBean("desktop",Desktop.class);
+        dt.compiling();
+
+        System.out.println(dt == dt2); // false --> Both are not Single Object
 
 
 
