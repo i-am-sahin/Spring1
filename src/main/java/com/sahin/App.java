@@ -30,8 +30,8 @@ public class App
 
 
                 //If we are not spicing the name here, then it will start searching by type.
-        Desktop desktop =  applicationContext.getBean(Desktop.class);
-        Computer com = applicationContext.getBean(Computer.class);
+//        Desktop desktop =  applicationContext.getBean(Desktop.class);
+//        Computer com = applicationContext.getBean(Computer.class);
 
     }
 }
