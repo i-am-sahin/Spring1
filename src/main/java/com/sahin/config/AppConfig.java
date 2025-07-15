@@ -5,15 +5,18 @@ import com.sahin.Computer;
 import com.sahin.Desktop;
 import com.sahin.Laptop;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
 
     @Bean
-    public Alien alien(@Autowired Computer com){
+    public Alien alien(@Autowired  Computer com) // @Qualifier("desktop") -->Use qualifier to tell which bean spring had choose! If we Mention Both Qualifier and Primary then  Spring Chooses Qualifier over Primary
+    {
         Alien obj = new Alien();
         obj.setAge(25);
         obj.setCom(com);
@@ -28,9 +31,10 @@ public class AppConfig {
 
            return new Desktop();
     }
-//        @Bean
-//    public Laptop laptop(){
-//
-//        return new Laptop();
-//    }
+        @Bean
+        @Primary
+    public Laptop laptop(){
+
+        return new Laptop();
+    }
 }
