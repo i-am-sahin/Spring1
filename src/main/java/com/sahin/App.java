@@ -17,12 +17,19 @@ public class App
 //           Crating Bean container using Java Based Configuration
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop dt = context.getBean("desktop",Desktop.class);
-        dt.compiling();
-        Desktop dt2 = context.getBean("desktop",Desktop.class);
-        dt.compiling();
 
-        System.out.println(dt == dt2); // false --> Both are not Single Object
+
+
+        Alien obj1 = context.getBean(Alien.class);
+        System.out.println(obj1.getAge());
+        obj1.code();
+
+//        Desktop dt = context.getBean("desktop",Desktop.class);
+//        dt.compiling();
+//        Desktop dt2 = context.getBean("desktop",Desktop.class);
+//        dt.compiling();
+
+//        System.out.println(dt == dt2); // false --> Both are not Single Object
 
 
 
