@@ -17,7 +17,7 @@ public class App
 //           Crating Bean container using Java Based Configuration
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop dt = context.getBean(Desktop.class);
+        Desktop dt = context.getBean("desktop",Desktop.class);
         dt.compiling();
 
 
